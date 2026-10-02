@@ -1,30 +1,33 @@
 <!doctype html>
 <html lang="pt-BR">
+<script>document.documentElement.classList.add('js')</script>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="description" content="Giulia Carv — Analista de Marketing & Performance. Tráfego pago, dados, automação e IA." />
   <meta name="theme-color" content="#efefeb" />
   <title>Giulia Carv — Marketing & Performance</title>
+  <!-- Fontes são aprimoramento progressivo: o currículo renderiza imediatamente com fallbacks locais. -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" /></noscript>
   <style>
     :root{
       --paper:#efefeb;--ink:#181618;--soft:#55524f;--line:#d6d4cd;--darkline:#33312f;
       --dim:#8a8781;--pale:#b3b0aa;--max:1600px;
     }
-    *{box-sizing:border-box} html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+    *{box-sizing:border-box} html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;max-width:100%}
     body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden}
     body.menu-open{overflow:hidden} a{color:inherit;text-decoration:none} button{font:inherit} ::selection{background:var(--ink);color:var(--paper)}
     ::-webkit-scrollbar{width:0;height:0}.wrap{width:min(100%,var(--max));margin:0 auto}.pad{padding-left:clamp(20px,3vw,40px);padding-right:clamp(20px,3vw,40px)}
     .display{font-family:Archivo,Inter,sans-serif;font-stretch:125%}.serif{font-family:"Instrument Serif",Georgia,serif}.mono{font-family:"Space Mono","Courier New",monospace}
     .link-draw{background-image:linear-gradient(currentColor,currentColor);background-size:0 1px;background-repeat:no-repeat;background-position:0 100%;transition:background-size .35s cubic-bezier(.22,1,.36,1);padding-bottom:2px}.link-draw:hover{background-size:100% 1px}
     .section{padding-top:clamp(80px,8vw,112px);padding-bottom:clamp(80px,8vw,112px)}
-    .section-head{display:flex;align-items:baseline;gap:clamp(16px,2vw,24px);border-bottom:1px solid var(--line);padding-bottom:clamp(20px,2vw,28px)}
+    .section-head{display:flex;align-items:baseline;gap:clamp(16px,2vw,24px);border-bottom:1px solid var(--line);padding-bottom:clamp(20px,2vw,28px);min-width:0}.section-title{min-width:0}
     .section-head.dark{border-color:var(--darkline)}.section-index{font-size:12px;letter-spacing:.2em;color:var(--soft)}.section-head.dark .section-index{color:var(--dim)}
     .section-title{margin:0;font-family:Archivo,Inter,sans-serif;font-stretch:125%;font-weight:900;text-transform:uppercase;line-height:.9;letter-spacing:-.02em;font-size:clamp(3.4rem,8vw,4.5rem)}
-    .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1);transition-delay:var(--delay,0ms);will-change:opacity,transform}.reveal.visible{opacity:1;transform:translateY(0)}
+    .reveal{opacity:1;transform:none}.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1);transition-delay:var(--delay,0ms);will-change:opacity,transform}.js .reveal.visible{opacity:1;transform:translateY(0)}
     .label{font-family:"Space Mono",monospace;font-size:10px;text-transform:uppercase;letter-spacing:.2em;color:var(--soft)}
     .dark .label,.label.darklabel{color:var(--dim)}
 
@@ -37,7 +40,7 @@
     .hero-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;border-top:1px solid var(--line);padding-top:24px}.hero-grid p{margin:8px 0 0;font-size:14px;font-weight:500;line-height:1.45}.scroll-indicator{height:40px;width:1px;background:var(--ink);animation:scroll-pulse 1.8s ease-in-out infinite;transform-origin:top}
     @keyframes scroll-pulse{0%,100%{transform:scaleY(1)}50%{transform:scaleY(.35)}}
 
-    .marquee{overflow:hidden;border-top:1px solid var(--darkline);border-bottom:1px solid var(--darkline);background:var(--ink);padding:18px 0;color:var(--paper)}.marquee-track{display:flex;width:max-content;animation:marquee 36s linear infinite}.marquee-group{display:flex;flex-shrink:0;align-items:center}.marquee-item{display:flex;align-items:center}.marquee-item strong{font-family:Archivo,sans-serif;font-weight:900;text-transform:uppercase;letter-spacing:.02em;font-size:clamp(18px,2.2vw,24px);padding:0 clamp(20px,2vw,28px)}.diamond{width:6px;height:6px;background:var(--paper);transform:rotate(45deg)}@keyframes marquee{to{transform:translateX(-50%)}}
+    .marquee{overflow:hidden;contain:layout paint;width:100%;max-width:100vw;border-top:1px solid var(--darkline);border-bottom:1px solid var(--darkline);background:var(--ink);padding:18px 0;color:var(--paper)}.marquee-track{display:flex;width:max-content;animation:marquee 36s linear infinite}.marquee-group{display:flex;flex-shrink:0;align-items:center}.marquee-item{display:flex;align-items:center}.marquee-item strong{font-family:Archivo,sans-serif;font-weight:900;text-transform:uppercase;letter-spacing:.02em;font-size:clamp(18px,2.2vw,24px);padding:0 clamp(20px,2vw,28px)}.diamond{width:6px;height:6px;background:var(--paper);transform:rotate(45deg)}@keyframes marquee{to{transform:translateX(-50%)}}
 
     .about-grid{display:grid;grid-template-columns:7fr 5fr;gap:48px;margin-top:clamp(48px,5vw,64px)}.statement{margin:0;font-family:Archivo,sans-serif;font-stretch:125%;font-size:clamp(30px,3.4vw,42px);font-weight:900;text-transform:uppercase;line-height:1.02;letter-spacing:-.015em}.statement em{font-family:"Instrument Serif",serif;font-weight:400;text-transform:none}.body-copy{max-width:660px;line-height:1.7;color:var(--soft);margin:32px 0 0}.callout{margin-top:32px;border-left:2px solid var(--ink);padding-left:20px}.callout p:last-child{font-size:15px;line-height:1.7;margin:12px 0 0}.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line)}.stat{background:var(--paper);padding:clamp(20px,2.2vw,28px);min-height:190px;display:flex;flex-direction:column;justify-content:space-between}.stat strong{font-family:Archivo,sans-serif;font-size:clamp(50px,5vw,64px);letter-spacing:-.03em}.stat span{font-size:13px;line-height:1.45;color:var(--soft)}
 
@@ -54,7 +57,7 @@
     @media (hover:hover){.experience-list:hover .exp:not(:hover){opacity:.3}}
     @media (max-width:1024px){.desktop-nav{display:none}.menu-btn{display:flex}.about-grid,.edu-grid{grid-template-columns:1fr}.skill-cols{grid-template-columns:repeat(2,1fr)}.tool-grid{grid-template-columns:repeat(2,1fr)}.projects-grid{grid-template-columns:1fr}.channels{grid-template-columns:repeat(2,1fr)}}
     @media (max-width:768px){.hero-grid{grid-template-columns:repeat(2,1fr)}.exp{grid-template-columns:1fr;gap:20px}.other-exp{grid-template-columns:1fr}.strategy{grid-template-columns:1fr}.portfolio-grid{grid-template-columns:1fr}.cert{align-items:flex-start;flex-direction:column;gap:6px}.cert span{text-align:left}.section-title{font-size:clamp(3rem,14vw,4rem)}}
-    @media (max-width:560px){.skill-cols,.tool-grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.channels{grid-template-columns:1fr 1fr}.hero-name{font-size:20vw}.hero-role{font-size:9.5vw}.portfolio-head{align-items:flex-start}.footer-bottom{align-items:flex-start;flex-direction:column}}
+    @media (max-width:560px){.skill-cols,.tool-grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.channels{grid-template-columns:1fr 1fr}.hero-name{font-size:20vw}.hero-role{font-size:9.5vw}.portfolio-head{align-items:flex-start}.footer-bottom{align-items:flex-start;flex-direction:column}.section-head{display:block}.section-head .section-index{display:block;margin-bottom:12px}.section-title{font-size:clamp(2.35rem,10.5vw,3rem);line-height:.94;letter-spacing:-.035em}.contact-title h2 span.main{font-size:clamp(4rem,19vw,5rem)}}
     @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.marquee-track,.scroll-indicator{animation:none!important}}
     @media print{header,.mobile-menu,.marquee,.scroll-indicator{display:none!important}.hero{min-height:auto;padding-top:20px}.section{padding:36px 20px}.skills,footer,.specialization{print-color-adjust:exact;-webkit-print-color-adjust:exact}.reveal{opacity:1!important;transform:none!important}.exp,.degree,.highlight,.cert{break-inside:avoid}.contact-title h2 span.main{font-size:72px}}
   </style>
@@ -201,7 +204,12 @@
   menuBtn.addEventListener('click',()=>setMenu(!mobileMenu.classList.contains('open'))); mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false))); document.addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false)});
 
   const reveals=document.querySelectorAll('.reveal');
-  if('IntersectionObserver' in window){const obs=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');obs.unobserve(entry.target)}}),{threshold:.12,rootMargin:'0px 0px -8% 0px'});reveals.forEach(el=>obs.observe(el));}else{reveals.forEach(el=>el.classList.add('visible'))}
+  if('IntersectionObserver' in window){
+    const obs=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');obs.unobserve(entry.target)}}),{threshold:.08,rootMargin:'0px 0px -4% 0px'});
+    reveals.forEach(el=>obs.observe(el));
+    // Segurança para Safari/WebViews: conteúdo nunca permanece invisível se o observer falhar.
+    window.setTimeout(()=>reveals.forEach(el=>el.classList.add('visible')),1800);
+  }else{reveals.forEach(el=>el.classList.add('visible'))}
 </script>
 </body>
 </html>
